@@ -15,6 +15,7 @@ function calcularCuotas(montoIngresado, cuotas) {
     return cuotaMensual;
 }
 
+/* simulador de cuotas */
 function simularCuotas() {
     let monto = prompt("Ingrese el monto total a financiar");
     let numeroMaxCuotas = parseInt(prompt("En cuantas cuotas quiere hacerlo?"));
@@ -38,4 +39,4 @@ function simularCuotas() {
     alert(resultados);
 }
 
-/* simularCuotas(); */
+
