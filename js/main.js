@@ -62,12 +62,12 @@ function calcularCuotas(montoIngresado, cuotas) {
 /* simulador de cuotas */
 function simularCuotas() {
     let monto = parseFloat(prompt("Ingrese el monto a financiar"));
-    let numeroMaxCuotas = parseInt(prompt("En cuantas cuotas quiere hacerlo?"));
+    let cuotasIngresadas = parseInt(prompt("En cuantas cuotas quiere hacerlo?"));
     
-    if (isNaN(monto || numeroMaxCuotas)) { /* isnan(monto) || isnan(numeromaxcuotas) */
+    if (isNaN(monto || cuotasIngresadas)) { /* isnan(monto) || isnan(numeromaxcuotas) */
         alert("Los numeros ingresados no son validos, intentelo de nuevo!");
         return;
-    } else if (monto <= 0 || numeroMaxCuotas <= 0) {
+    } else if (monto <= 0 || cuotasIngresadas <= 0) {
         alert("Los datos deben ser mayores a cero");
         return
     } else {
@@ -76,9 +76,9 @@ function simularCuotas() {
 
     let resultado = "Simulacion de pagos en Cuotas:\n";
 
-    for (let cantidadDeCuotas = 1; cantidadDeCuotas <= numeroMaxCuotas; cantidadDeCuotas++) {
+    for (let cantidadDeCuotas = cuotasIngresadas; cantidadDeCuotas <= cuotasIngresadas; cantidadDeCuotas++) {
         let cuotaMensual = calcularCuotas(monto, cantidadDeCuotas);
         resultado += "Cuotas: " + cantidadDeCuotas + " - Monto mensual: $" + cuotaMensual.toFixed(2) + "\n";
     }
-    alert(cantidadDeCuotas);
+    alert(resultado);
 }
